@@ -67,3 +67,18 @@ const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+Describe: ommitOffensiveWords()
+Test1: "It should identify the offensive word, zoinks, in the text, and remove it,otherwise it return the word."
+Code:
+const text = "Hello"
+const word = "zoinks"
+ommitOffensiveWords(word, text)
+Expected Output: "Hello"
+
+Test2: "It should identify the offensive word, zoinks, in a sentence, and remove it,otherwise it return the word."
+Code:
+const text = "Hello"
+const word = "zoinks"
+ommitOffensiveWords(word, text)
+Expected Output: "Hello"
