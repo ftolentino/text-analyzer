@@ -69,16 +69,16 @@ numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
 Describe: ommitOffensiveWords()
-Test1: "It should identify the offensive word, zoinks, in the text, and remove it,otherwise it return the word."
+Test1: "Checks to see if text is equal to word. If text is equal word, return text. If text is not equal to word return an empty string."
 Code:
 const text = "Hello"
 const word = "zoinks"
 ommitOffensiveWords(word, text)
 Expected Output: "Hello"
 
-Test2: "It should identify the offensive word, zoinks, in a sentence, and remove it,otherwise it return the word."
+Test2: "It should loop through wordArray, identify zoinks, and return true)"
 Code:
-const text = "Hello"
+const text = "Hello world! I love zoinks"
 const word = "zoinks"
 ommitOffensiveWords(word, text)
-Expected Output: "Hello"
+Expected Output: boolean: true;

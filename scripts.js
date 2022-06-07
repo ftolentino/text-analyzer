@@ -28,11 +28,27 @@ function numberOfOccurrencesInText() {
   return wordCount;
 }
 
-function ommitOffensiveWords () {
+function ommitOffensiveWords (word,text) {
   const wordArray = text.split(" ");
+  wordArray.forEach(function(word) {
     if (text === word) {
       return " ";
     }
     return text;
+  });
 }
 
+
+function ommitOffensiveWords(word, text) {
+  const wordArray = text.split(" ");
+  wordArray.forEach(function(element) {
+    if (element === word) {
+      console.log(true);
+    } else {
+			console.log(false);
+		}   	
+  });
+}
+
+const word = "zoinks";
+const text = "hello world zoinks";
