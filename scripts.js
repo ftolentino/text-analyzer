@@ -28,27 +28,68 @@ function numberOfOccurrencesInText() {
   return wordCount;
 }
 
-function ommitOffensiveWords (word,text) {
-  const wordArray = text.split(" ");
-  wordArray.forEach(function(word) {
-    if (text === word) {
-      return " ";
-    }
-    return text;
-  });
-}
+// function ommitOffensiveWords (word,text) {
+//   const wordArray = text.split(" ");
+//   wordArray.forEach(function(word) {
+//     if (text === word) {
+//       return " ";
+//     }
+//     return text;
+//   });
+// }
 
 
-function ommitOffensiveWords(word, text) {
+// function ommitOffensiveWords(word, text) {
+//   const wordArray = text.split(" ");
+//   wordArray.forEach(function(element) {
+//     if (element === word) {
+//       console.log(true);
+//     } else {
+// 			console.log(false);
+// 		}   	
+//   });
+// }
+
+// function ommitOffensiveWords(badWords, text) {
+//   const wordArray = text.split(" ");
+//   wordArray.forEach(function(element) {
+//     if (element === badWords) {
+      
+//     } 
+//   });
+// }
+
+// function ommitOffensiveWords(word, text) {
+//   const wordArray = text.split(" ");
+//   wordArray.forEach(function(element) {
+//     if (element === word) {
+//       console.log(true);
+//     } else{
+//       console.log(false)
+//     }
+//   });
+// }
+
+function ommitOffensiveWords(badWord, text) {
+	let safeWords = [];
   const wordArray = text.split(" ");
+  let counter = -1;
   wordArray.forEach(function(element) {
-    if (element === word) {
-      console.log(true);
-    } else {
-			console.log(false);
-		}   	
-  });
+    safeWords = wordArray;
+    counter++;
+    if(element === badWord) {
+      safeWords.splice(counter, 1);
+    }
+  });  
+  return safeWords.join(" ");
 }
 
-const word = "zoinks";
-const text = "hello world zoinks";
+const badWords = ['zoinks', 'muppeteer', 'biffaroni', 'loopdaloop' ];
+const text = "Hello zoinks world! I love zoinks";
+const badWord = badWords[0];
+
+console(ommitOffensiveWords(badWord, text));
+
+
+
+
